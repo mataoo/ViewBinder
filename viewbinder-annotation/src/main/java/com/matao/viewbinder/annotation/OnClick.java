@@ -1,4 +1,4 @@
-package com.matao.annotation;
+package com.matao.viewbinder.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

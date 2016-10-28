@@ -1,4 +1,4 @@
-package com.matao.binder;
+package com.matao.viewbinder;
 
 import org.junit.Test;
 

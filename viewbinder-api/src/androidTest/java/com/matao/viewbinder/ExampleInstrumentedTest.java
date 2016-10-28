@@ -1,4 +1,4 @@
-package com.matao.binder;
+package com.matao.viewbinder;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

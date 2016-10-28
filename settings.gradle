@@ -1,1 +1,1 @@
-include ':sample', ':viewbinder-annotation', ':viewbinder', ':viewbinder-compiler'
+include ':sample', ':viewbinder-annotation', ':viewbinder-api', ':viewbinder-compiler'

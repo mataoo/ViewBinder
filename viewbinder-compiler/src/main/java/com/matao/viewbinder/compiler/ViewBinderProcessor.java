@@ -100,7 +100,6 @@ public class ViewBinderProcessor extends AbstractProcessor {
 
     private void processBindView(RoundEnvironment roundEnv) throws IllegalArgumentException {
         for (Element element : roundEnv.getElementsAnnotatedWith(BindView.class)) {
-            // TODO: 16/8/4 检查 字段 的修饰符
             AnnotatedClass annotatedClass = getAnnotatedClass(element);
             BindViewField field = new BindViewField(element);
             annotatedClass.addField(field);

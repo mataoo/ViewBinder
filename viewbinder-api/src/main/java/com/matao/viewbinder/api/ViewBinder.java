@@ -34,13 +34,18 @@ public class ViewBinder {
         inject(host, view, PROVIDER_VIEW);
     }
 
+    /**
+     * @param host     注解 View 变量所在的类
+     * @param source   查找 View 的地方，Activity & View 自身就可以查找，Fragment 需要在自己的 itemView 中查找
+     * @param provider 是一个接口，定义了不同对象（比如 Activity、View 等）如何去查找目标 View
+     */
     public static void inject(Object host, Object source, Provider provider) {
         String className = host.getClass().getName();
         try {
             Binder binder = BINDER_MAP.get(className);
             if (binder == null) {
-                Class<?> finderClass = Class.forName(className + "$$Binder");
-                binder = (Binder) finderClass.newInstance();
+                Class<?> binderClass = Class.forName(className + "$$Binder");
+                binder = (Binder) binderClass.newInstance();
                 BINDER_MAP.put(className, binder);
             }
             binder.inject(host, source, provider);

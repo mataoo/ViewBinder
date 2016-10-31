@@ -28,15 +28,10 @@ import javax.tools.Diagnostic;
 @AutoService(Processor.class)
 public class ViewBinderProcessor extends AbstractProcessor {
 
-    private Filer mFiler;       // 跟文件相关的辅助类，生成JavaSourceCode
+    private Filer mFiler;           // 跟文件相关的辅助类，生成JavaSourceCode
     private Elements mElementUtils; // 跟元素相关的辅助类，帮助获取元素相关信息
     private Messager mMessager;     // 跟日志相关的辅助类
 
-    private HashMap<String, AnnotatedClass> annotatedClassMap = new HashMap<>();
-
-    /**
-     * key:
-     */
     private Map<String, AnnotatedClass> mAnnotatedClassMap = new HashMap<>();
 
     @Override

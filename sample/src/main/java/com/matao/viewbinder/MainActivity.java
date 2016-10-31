@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         ViewBinder.inject(this);
     }
 
-    @OnClick(R.id.bt_click)
+    @OnClick({R.id.bt_click, R.id.tv_msg})
     void onClickBt() {
         Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
         tvMsg.setText("~~ Hello ~~");

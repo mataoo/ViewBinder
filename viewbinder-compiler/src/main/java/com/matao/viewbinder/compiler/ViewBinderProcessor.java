@@ -110,6 +110,7 @@ public class ViewBinderProcessor extends AbstractProcessor {
     }
 
     private AnnotatedClass getAnnotatedClass(Element element) {
+        // 通过被注解的element，得到起所在类，并返回组装后的AnnotatedClass
         TypeElement classElement = (TypeElement) element.getEnclosingElement();
         String fullClassName = classElement.getQualifiedName().toString();
         AnnotatedClass annotatedClass = mAnnotatedClassMap.get(fullClassName);

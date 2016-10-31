@@ -17,14 +17,16 @@ import javax.lang.model.util.Elements;
 
 /**
  * Created by matao on 2016-10-28 11:28
+ * <p>
+ * 包含注解的类
  */
 
 public class AnnotatedClass {
 
-    public TypeElement mClassElement;
-    public List<BindViewField> mFields;
-    public List<OnClickMethod> mMethods;
-    public Elements mElementUtils;
+    private TypeElement mClassElement;
+    private List<BindViewField> mFields;
+    private List<OnClickMethod> mMethods;
+    private Elements mElementUtils;
 
     public AnnotatedClass(TypeElement classElement, Elements elementUtils) {
         this.mClassElement = classElement;
@@ -92,5 +94,4 @@ public class AnnotatedClass {
 
         return JavaFile.builder(packageName, finderClass).build();
     }
-
 }
